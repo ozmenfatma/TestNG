@@ -9,7 +9,7 @@ import techproed.utilities.Driver;
 
 public class Day21_TechProTestCenter {
 
-    @Test
+    @Test(groups = "regression-tests")
     public void testName() {
         Driver.getDriver().get(ConfigReader.getProperty("techpro_test_url"));
         TechproLoginPage techproLoginPage = new TechproLoginPage();

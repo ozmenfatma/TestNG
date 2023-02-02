@@ -23,8 +23,11 @@ public class Day24_ExcelLogin2 {
         excelUtils=new ExcelUtils(path,sayfa);
         excelDatalari=excelUtils.getDataList();
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
+
 //        home page logine tikla
         for (Map<String,String> data:excelDatalari) {
+
+
             //        Sayfaya git
             Driver.getDriver().get(ConfigReader.getProperty("app_url"));//HOME SAYFASINA
             blueRentalHomePage= new BlueRentalHomePage();

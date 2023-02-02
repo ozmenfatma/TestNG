@@ -62,7 +62,7 @@ public class Day23_ExcelLogin {  //28.01.2023
 
     @Test
     public void customerLogin() throws IOException {
-   String path="./src/test/java/resources/mysmoketestdata.xlsx";///  ./ onceki tum dosyalari icerir. Relative path kullandik. bunu kullanmassak onceki dosyalari gormez
+   String path="./src/test/java/resources/mysmoketestdata.xlsx";///  "./" demek onceki tum dosyalari icerir. Relative path kullandik. bunu kullanmassak onceki dosyalari gormez
 
    String sheetName="customer_info";
 
@@ -93,9 +93,10 @@ public class Day23_ExcelLogin {  //28.01.2023
             blueRentalLoginPage.loginButton.click();
             ReusableMethods.waitFor(1);
 
-            //            giris isleminin basarili oldugunu gostermek icin assertion
+            //  giris isleminin basarili oldugunu gostermek icin assertion
             ReusableMethods.verifyElementDisplayed(blueRentalHomePage.userID);
             ReusableMethods.waitFor(1);
+
 //            Her bir girisden sonra ekran goruntusu aldik
             ReusableMethods.getScreenshot("EkranGoruntusu");
         }

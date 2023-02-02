@@ -1,15 +1,14 @@
-package techproed.tests.smoketest;
+package techproed.tests.smoketests;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import techproed.pages.BlueRentalHomePage;
 import techproed.pages.BlueRentalLoginPage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
+import techproed.utilities.ReusableMethods;
 
-public class Day22_SmokeTest {
+public class pratık_kendimce {
+
 
     /*
     	•Name: US100201_Admin_Login
@@ -26,19 +25,22 @@ public class Day22_SmokeTest {
     BlueRentalLoginPage blueRentalLoginPage;
 
     @Test
-    public void US100201_Admin_Login() {
+    public void testName() {
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
-        blueRentalHomePage = new BlueRentalHomePage();
-        blueRentalLoginPage = new BlueRentalLoginPage();
+        blueRentalHomePage=new BlueRentalHomePage();
+        blueRentalLoginPage=new BlueRentalLoginPage();
+
         blueRentalHomePage.loginLink.click();
         blueRentalLoginPage.emailBox.sendKeys(ConfigReader.getProperty("admin_email"));
+        ReusableMethods.waitFor(1);
         blueRentalLoginPage.passwordBox.sendKeys(ConfigReader.getProperty("admin_sifre"));
+        ReusableMethods.waitFor(1);
         blueRentalLoginPage.loginButton.click();
+        ReusableMethods.waitFor(1);
 
-        Assert.assertTrue(blueRentalHomePage.userID.isDisplayed());
-
-        Driver.closeDriver();
-
+        blueRentalHomePage.userID.click();
+        blueRentalHomePage.logoutLink.click();
+        blueRentalHomePage.OK.click();
 
     }
 }
