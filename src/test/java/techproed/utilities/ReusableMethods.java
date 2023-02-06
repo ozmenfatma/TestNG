@@ -217,6 +217,7 @@ public class ReusableMethods {
             Assert.fail("Element not found: " + element);
         }
     }
+    }
 
 
-}
+

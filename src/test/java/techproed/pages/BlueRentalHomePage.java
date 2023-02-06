@@ -13,15 +13,17 @@ public class BlueRentalHomePage {
             PageFactory.initElements(Driver.getDriver(),this);
         }
 
-        @FindBy(partialLinkText = "Login")
-        public WebElement loginLink;
+    @FindBy(partialLinkText = "Login")
+    public WebElement loginLink;
 
-        @FindBy(id = "dropdown-basic-button")
-         public WebElement userID;
+    @FindBy(id = "dropdown-basic-button")
+    public WebElement userID;
 
-         @FindBy(linkText = "Logout") public WebElement logoutLink;
+    @FindBy(linkText = "Logout")
+    public WebElement logoutLink;
 
-         @FindBy(xpath="//button[.='OK']") public WebElement OK;
+    @FindBy(xpath = "//button[.='OK']")
+    public WebElement OK;
 
 
 }

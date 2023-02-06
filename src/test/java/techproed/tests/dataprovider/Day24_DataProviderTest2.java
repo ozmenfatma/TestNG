@@ -35,7 +35,6 @@ public class Day24_DataProviderTest2 {
     //    BU 4 CUSTOMER DATALARI ILE LOGIN TESTI YAPALIM
     BlueRentalHomePage blueRentalHomePage;
     BlueRentalLoginPage blueRentalLoginPage;
-
     @Test(dataProvider = "customerData")
     public void dataProviderLoginTest(String email, String sifre) throws IOException {
         //        Sayfaya git
@@ -60,6 +59,7 @@ public class Day24_DataProviderTest2 {
         blueRentalHomePage.logoutLink.click();
         ReusableMethods.waitFor(1);
         blueRentalHomePage.OK.click();
+        Driver.closeDriver();
     }
 
     }

@@ -1,4 +1,4 @@
-package techproed.tests.smoketests;
+package techproed.tests;
 
 import org.testng.annotations.Test;
 import techproed.pages.BlueRentalHomePage;
@@ -7,7 +7,7 @@ import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
-public class pratık_kendimce {
+public class pratik_kendimce {
 
 
     /*
